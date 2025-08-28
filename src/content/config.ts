@@ -14,23 +14,6 @@ const pagesCollection = defineCollection({
 const indexSchema = z.intersection(
   z.object({
     banner: z.custom<Section>(),
-    features: z.object({
-      title: z.string(),
-      description: z.string(),
-      feature_list: z.array(
-        z.object({
-          title: z.string(),
-          content: z.string(),
-          icon: z.string(),
-        }),
-      ),
-    }),
-    testimonial: z.custom<Testimonial>(),
-    call_to_action: z.object({
-      title: z.string(),
-      description: z.string(),
-      button: z.custom<LinkButton>(),
-    }),
   }),
   zodPageConfig,
 );
