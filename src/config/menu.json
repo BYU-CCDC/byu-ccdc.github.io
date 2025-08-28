@@ -5,52 +5,31 @@
       "url": "/"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
-      "name": "Theme",
-      "url": "/theme"
-    },
-    {
-      "name": "About",
+      "name": "About Us",
       "url": "/about"
     },
     {
-      "name": "Pages",
+      "name": "Tryouts",
+      "url": "/tryouts"
+    },
+    {
+      "name": "Resources",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Does not exist",
-          "url": "/does-not-exist"
-        },
-
-        {
-          "name": "Neither does this",
-          "url": "/neither-does-this"
-        },
-        {
-          "name": "Nope, not this one either",
-          "url": "/nope-not-this-one-either"
-        },
-        {
-          "name": "What about this?",
-          "url": "/what-about-this"
-        },
-        {
-          "name": "Come on, this one must exist",
-          "url": "/come-on-this-one-must-exist"
+          "name": "National CCDC",
+          "url": "https://www.nationalccdc.org/"
         },
         {
           "name": "Do you expect this to exist?",
           "url": "/do-you-expect-this-to-exist"
         }
       ]
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
     }
   ],
 

@@ -159,33 +159,39 @@ declare module 'astro:content' {
   data: InferEntrySchema<"about">
 } & { render(): Render[".mdx"] };
 };
-"changelog": {
-"index.mdx": {
-	id: "index.mdx";
-  slug: "index";
+"changelog": Record<string, {
+  id: string;
+  slug: string;
   body: string;
   collection: "changelog";
-  data: InferEntrySchema<"changelog">
-} & { render(): Render[".mdx"] };
-};
+  data: any;
+  render(): Render[".md"];
+}>;
+"competitions": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "competitions";
+  data: InferEntrySchema<"competitions">;
+  render(): Render[".md"];
+}>;
 "contact": {
-"index.md": {
-	id: "index.md";
+"index.mdx": {
+	id: "index.mdx";
   slug: "index";
   body: string;
   collection: "contact";
   data: InferEntrySchema<"contact">
-} & { render(): Render[".md"] };
-};
-"features": {
-"index.mdx": {
-	id: "index.mdx";
-  slug: "index";
-  body: string;
-  collection: "features";
-  data: InferEntrySchema<"features">
 } & { render(): Render[".mdx"] };
 };
+"features": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "features";
+  data: any;
+  render(): Render[".md"];
+}>;
 "homepage": {
 "index.md": {
 	id: "index.md";
@@ -195,14 +201,39 @@ declare module 'astro:content' {
   data: InferEntrySchema<"homepage">
 } & { render(): Render[".md"] };
 };
+"invitational": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "invitational";
+  data: any;
+  render(): Render[".md"];
+}>;
 "pages": {
 "404.md": {
 	id: "404.md";
   slug: "404";
   body: string;
   collection: "pages";
-  data: InferEntrySchema<"pages">
+  data: any
 } & { render(): Render[".md"] };
+};
+"resources": Record<string, {
+  id: string;
+  slug: string;
+  body: string;
+  collection: "resources";
+  data: InferEntrySchema<"resources">;
+  render(): Render[".md"];
+}>;
+"tryouts": {
+"index.mdx": {
+	id: "index.mdx";
+  slug: "index";
+  body: string;
+  collection: "tryouts";
+  data: any
+} & { render(): Render[".mdx"] };
 };
 
 	};
