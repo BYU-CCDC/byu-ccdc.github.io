@@ -20,6 +20,18 @@
         {
           "name": "National CCDC",
           "url": "https://www.nationalccdc.org/"
+        },
+        {
+          "name": "Cobalt Strike: What NCCDC is like",
+          "url": "https://www.cobaltstrike.com/blog/so-you-won-a-regional-and-youre-headed-to-national-ccdc"
+        },
+        {
+          "name": "How To Win CCDC",
+          "url": "https://akshayrohatgi.com/blog/posts/How-To-Win-CCDC/"
+        },
+        {
+          "name": "How to (also) win CCDC",
+          "url": "https://github.com/mubix/howtowinccdc?tab=readme-ov-file"
         }
       ]
     },

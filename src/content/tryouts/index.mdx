@@ -20,7 +20,7 @@ description: "Want to join our team? Here's how!"
   section={{
     title: "Schedule",
     content:
-      '<table class="table-auto border-collapse border border-gray-300 w-full text-sm text-left">\
+      'September 27th, 2025<br><br><table class="table-auto border-collapse border border-gray-300 w-full text-sm text-left">\
   <thead>\
     <tr>\
       <th class="px-4 py-2 border border-gray-300">Time</th>\
@@ -61,7 +61,7 @@ description: "Want to join our team? Here's how!"
   section={{
     title: "Info Sessions / Trainings",
     content:
-      'We will be holding three info sessions and trainings prior to tryouts at <span class="text-accent font-bold">5pm in TNRB W328.</span><br><br>\
+      'We will be holding three info sessions and trainings prior to tryouts on <span class="text-accent font-bold">Thursdays at 5pm in TNRB W328.</span><br><br>\
       <table class="table-auto border-collapse border border-gray-300 w-full text-sm text-left">\
   <thead>\
     <tr>\
@@ -98,31 +98,56 @@ At the end of the final info session, you will also receive your pre-competition
     A. There are at least 3 alternate slots available this year.<br><br>\
     \
     <span class="text-secondary font-bold">Q. Do I have to be a cybersecurity major?</span><br>\
-    A. No. We currently have team members from multiple majors, and a great team member can come from anywhere.<br><br>\
+    A. No. A great team member can come from anywhere. Historically we have had team members from multiple majors.<br><br>\
     \
     <span class="text-secondary font-bold">Q. I am new to cybersecurity. Where can I start?</span><br>\
-    A. A great place to start is with one of TryHackMe\'s introductory <a class="underline text-accent" href=https://tryhackme.com/hacktivities>learning paths</a>.<br><br>\
+    A. Great places to start are with one of TryHackMe\'s introductory <a class="underline text-accent" href=https://tryhackme.com/hacktivities>learning paths</a> and by attending one of BYU\'s cybersecurity clubs (e.g. <a class="underline text-accent" href="https://clubs.byu.edu/p/clubview/18295873486205398">Cybersecurity Student Association</a>) <br><br>\
     \
     <span class="text-secondary font-bold">Q. How can I prepare for the competition and the team? What kinds of skills are you looking for?</span><br>\
-    A. This list is not meant to be exhaustive.<br><br>\
+    A. This list is not meant to be exhaustive, nor do we expect every team member to have all of these skills. Generally, picking 1-2 areas to focus on is best.<br><br>\
     \
-    <div>Technical skills</div>\
-    \
-    <ul class="list-disc list-inside pl-4 space-y-1">\
-      <li>Windows administration - Knowing how to </li>\
-      <li>Linux administration - Knowing how to navigate using the command-line, change settings, create users, and elevate permissions, especially in Apache and SSH.</li>\
-      <li>Reconnaissance - Knowing how to find vulnerabilities. This can be using tools like NMap and SQLMap or looking through web source code for weak code.</li>\
-      <li>Persistence - Implanting code to allow you to get back into a system you have compromised but have been kicked out of. This can include reverse shells, C2 servers, and other backdoors.</li>\
-      <li>Web vulnerabilities - Finding bugs in code that can be exploited, especially in Javascript, PHP, and ASP.NET. This may include things like SQL injection, XSS, and file uploads.</li>\
+    <h5>Windows Administration</h5>\
+    <ul class="list-disc list-outside px-7">\
+      <li>Know how to configure and harden Windows machines on a domain</li>\
+      <li>Know how to work with PowerShell, group policy, and Windows Firewall and secure common Windows services like IIS and RDP</li>\
+      <li>Be familiar with common Windows attack vectors (e.g. EternalBlue, Golden Ticket attacks, etc.)</li>\
     </ul><br>\
     \
-    <div>Policy, framework, and legal skills</div>\
+    <h5>Linux Administration</h5>\
+    <ul class="list-disc list-outside px-7">\
+      <li>Know how to navigate the Linux command line to perform tasks like creating users, changing passwords, and change various system settings</li>\
+      <li>Know how to secure common Linux services like SSH, SMTP, and FTP</li>\
+      <li>Be comfortable working with any Linux distro and understand the important differences between them</li>\
+    </ul><br>\
+    \
+    <h5>Website Administration</h5>\
+    <ul class="list-disc list-outside px-7">\
+      <li>Know common security vulnerabilities (e.g. OWASP Top 10) and mitigation strategies for websites</li>\
+      <li>Know how to set up and configure a web server in a variety of languages and software stacks (e.g. Apache, Nginx, IIS, Flask, various PHP CMSs)</li>\
+      <li>Know how to find vulnerabilities using tools like nmap or OWASP ZAP</li>\
+    </ul><br>\
+    \
+    <h5>Incident Response/Threat Hunting</h5>\
+    <ul class="list-disc list-outside px-7">\
+      <li>Know how to read logs from both Windows and Linux systems (Windows Event Log, Linux syslog and auth.log, etc.)</li>\
+      <li>Know how to setup and maintain a SIEM (e.g. Splunk) for centralized logging</li>\
+      <li>Know how to find indicators of compromise (IOCs) in log files to remediate security incidents</li>\
+    </ul><br>\
+    \
+    <h5>Firewalls and Networking</h5>\
+    <ul class="list-disc list-outside px-7">\
+      <li>Know how to configure a network-level firewall from scratch, especially on a Cisco or Palo device</li>\
+      <li>Know how to configure rules to minimize network attack surface (e.g. ingress/egress filtering, network segmentation, etc.)</li>\
+      <li>Be able to understand and synthesize a network topology to accurately diagnose what traffic should be allowed/disallowed on a corporate network</li>\
+    </ul><br>\
+    \
+    <h5>Policy, framework, and legal skills</h5>\
     <ul class="list-disc list-inside pl-4 space-y-1">\
-      <li>Business writing - Knowing how to write professionally and to a non-technical audience.</li>\
-      <li>Laws - Knowing laws such as FERPA, HIPPA, and GDPR and how business should apply them.</li>\
-      <li>Best practices - Knowing how companies apply current knowledge, such as privacy, personal device use, and user permissions.</li>\
-      <li>Frameworks - Knowing how to apply frameworks for organizations, such as NIST.</li>\
-      <li>Reports - Knowing how to write a report of an incident.</li>\
+      <li>Business writing - Know how to write professionally and to a non-technical audience.</li>\
+      <li>Laws - Know laws such as FERPA, HIPPA, and GDPR and how business should apply them</li>\
+      <li>Best practices - Know how companies apply current knowledge, such as privacy, personal device use, and user permissions</li>\
+      <li>Frameworks - Know how to apply frameworks for organizations, such as NIST</li>\
+      <li>Reports - Know how to write a report of an incident</li>\
     </ul><br>\
     \
     If you have more questions, please email Justin Giboney - <a class="underline text-accent" href="mailto:justin_giboney@byu.edu">justin_giboney@byu.edu</a> or reach out via <a class="underline text-secondary" href="https://discord.gg/4dTMZWArJG">Discord</a>, either in the <span class="text-accent">#team-tryouts</span> channel or by DMing anyone with the <span class="text-secondary">@CCDC</span> role.',
