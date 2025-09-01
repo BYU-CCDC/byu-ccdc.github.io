@@ -159,14 +159,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"about">
 } & { render(): Render[".mdx"] };
 };
-"changelog": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "changelog";
-  data: any;
-  render(): Render[".md"];
-}>;
 "competitions": Record<string, {
   id: string;
   slug: string;
@@ -184,14 +176,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"contact">
 } & { render(): Render[".mdx"] };
 };
-"features": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "features";
-  data: any;
-  render(): Render[".md"];
-}>;
 "homepage": {
 "index.md": {
 	id: "index.md";
@@ -201,14 +185,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"homepage">
 } & { render(): Render[".md"] };
 };
-"invitational": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "invitational";
-  data: any;
-  render(): Render[".md"];
-}>;
 "pages": {
 "404.md": {
 	id: "404.md";
