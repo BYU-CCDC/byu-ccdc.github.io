@@ -16,26 +16,99 @@ const { contact_form_action } = config.params;
   </section>
 
   <section class="section pt-0">
-    <div class="container mx-auto p-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-gray-800">
-          <div class="p-4">
-            <h2 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Email</h2>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Justin Giboney <a class="underline text-accent" href="mailto:justin_giboney@byu.edu">justin_giboney@byu.edu</a>
-            </p>
+      <div class="bg-surface mx-auto p-8 rounded-3xl shadow-xl w-full md:w-1/2">
+          <h2 class="text-2xl font-bold mb-8">Contact Information</h2>
+          
+          <div class="space-y-8">
+              <div class="flex items-center gap-4 group">
+                  <div class="bg-blue-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                  </div>
+                  <div>
+                      <p class="text-gray-400">Email</p>
+                      <p>
+                        Justin Giboney<br>
+                        <a class="hover:underline text-accent" href="mailto:justin_giboney@byu.edu">justin_giboney@byu.edu</a>
+                      </p>
+                  </div>
+              </div>
+              
+              <div class="flex items-center gap-4 group">
+                  <div class="bg-purple-900 p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                  </div>
+                  <div>
+                      <p class="text-gray-400">Discord</p>
+                      <p>
+                        Ping <span class="text-secondary">@CCDC</span> in the <span class="text-text-disabled">#team-tryouts</span> channel<br>
+                        <a href="https://discord.gg/4dTMZWArJG" class="text-accent hover:underline">Join the Cybersecurity Discord</a>
+                      </p>
+                  </div>
+              </div>
           </div>
-        </div>
-
-        <div class="rounded-2xl overflow-hidden shadow-lg bg-white dark:bg-gray-800">
-          <div class="p-4">
-            <h2 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Discord</h2>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Discord - Join <a class="underline text-accent" href="https://discord.gg/4dTMZWArJG">here</a> and message anyone with or ping the <span class="text-secondary">@CCDC</span> role
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
+
+    <script>
+        let currentStep = 1;
+        const steps = ['step1', 'step2', 'step3', 'step4'];
+        const indicators = ['step1Indicator', 'step2Indicator', 'step3Indicator', 'step4Indicator'];
+        const nextBtn = document.getElementById('nextBtn');
+        const backBtn = document.getElementById('backBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const textarea = document.querySelector('textarea');
+        const charCount = document.getElementById('charCount');
+
+        function updateStep() {
+             steps.forEach(step => {
+                document.getElementById(step).classList.add('hidden');
+            });
+
+             indicators.forEach(indicator => {
+                const el = document.getElementById(indicator);
+                el.classList.remove('w-8', 'bg-blue-500');
+                el.classList.add('w-2', 'bg-gray-600');
+            });
+
+             document.getElementById(steps[currentStep - 1]).classList.remove('hidden');
+            
+             const currentIndicator = document.getElementById(indicators[currentStep - 1]);
+            currentIndicator.classList.remove('w-2', 'bg-gray-600');
+            currentIndicator.classList.add('w-8', 'bg-blue-500');
+
+             backBtn.classList.toggle('hidden', currentStep === 1);
+            nextBtn.classList.toggle('hidden', currentStep === 4);
+            submitBtn.classList.toggle('hidden', currentStep !== 4);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < 4) {
+                currentStep++;
+                updateStep();
+            }
+        });
+
+        backBtn.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                updateStep();
+            }
+        });
+
+        submitBtn.addEventListener('click', () => {
+            console.log('Form submitted');
+            alert('Form submitted successfully!');
+        });
+
+        textarea.addEventListener('input', () => {
+            charCount.textContent = textarea.value.length;
+        });
+
+         updateStep();
+    </script>
+</body>
   </section>
 </Base>
