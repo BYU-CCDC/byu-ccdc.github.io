@@ -5,7 +5,6 @@ import Base from "@/layouts/Base.astro";
 import { getEntry } from "astro:content";
 
 const entry = await getEntry("contact", "index");
-const { contact_form_action } = config.params;
 ---
 
 <Base
@@ -52,63 +51,6 @@ const { contact_form_action } = config.params;
           </div>
       </div>
 
-    <script>
-        let currentStep = 1;
-        const steps = ['step1', 'step2', 'step3', 'step4'];
-        const indicators = ['step1Indicator', 'step2Indicator', 'step3Indicator', 'step4Indicator'];
-        const nextBtn = document.getElementById('nextBtn');
-        const backBtn = document.getElementById('backBtn');
-        const submitBtn = document.getElementById('submitBtn');
-        const textarea = document.querySelector('textarea');
-        const charCount = document.getElementById('charCount');
-
-        function updateStep() {
-             steps.forEach(step => {
-                document.getElementById(step).classList.add('hidden');
-            });
-
-             indicators.forEach(indicator => {
-                const el = document.getElementById(indicator);
-                el.classList.remove('w-8', 'bg-blue-500');
-                el.classList.add('w-2', 'bg-gray-600');
-            });
-
-             document.getElementById(steps[currentStep - 1]).classList.remove('hidden');
-            
-             const currentIndicator = document.getElementById(indicators[currentStep - 1]);
-            currentIndicator.classList.remove('w-2', 'bg-gray-600');
-            currentIndicator.classList.add('w-8', 'bg-blue-500');
-
-             backBtn.classList.toggle('hidden', currentStep === 1);
-            nextBtn.classList.toggle('hidden', currentStep === 4);
-            submitBtn.classList.toggle('hidden', currentStep !== 4);
-        }
-
-        nextBtn.addEventListener('click', () => {
-            if (currentStep < 4) {
-                currentStep++;
-                updateStep();
-            }
-        });
-
-        backBtn.addEventListener('click', () => {
-            if (currentStep > 1) {
-                currentStep--;
-                updateStep();
-            }
-        });
-
-        submitBtn.addEventListener('click', () => {
-            console.log('Form submitted');
-            alert('Form submitted successfully!');
-        });
-
-        textarea.addEventListener('input', () => {
-            charCount.textContent = textarea.value.length;
-        });
-
-         updateStep();
-    </script>
 </body>
   </section>
 </Base>
