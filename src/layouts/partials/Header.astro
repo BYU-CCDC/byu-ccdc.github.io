@@ -118,7 +118,7 @@ const { pathname } = Astro.url;
 </nav>
 
 {Astro.url.pathname === '/' && (
-<div class="inset-x-0 z-50">
+<div class="inset-x-0 z-50" style="display: none;" id="tryouts-banner">
     <div class="bg-info">
         <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center justify-between lg:flex-row lg:justify-center">
@@ -162,8 +162,22 @@ const { pathname } = Astro.url;
       button.addEventListener("click", toggleDropdown);
     });
   }
+
+  function showTryoutsBanner() {
+    const now = new Date();
+    const year = now.getFullYear();
+    
+    // Define start/end for the current year
+    const startDate = new Date(year, 5, 1); // June 1 (0-indexed month)
+    const endDate = new Date(year, 9, 20); // October 20
+
+    if (now >= startDate && now <= endDate) {
+      document.getElementById('tryouts-banner').style.display = 'block';
+    }
+  }
   // Asegura que los eventos se reasignen después de cada navegación
   document.addEventListener("astro:page-load", () => {
     initDropdownListeners();
+    showTryoutsBanner();
   });
 </script>
